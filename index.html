@@ -1,32 +1,163 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Diamond Naraindut</title>
-    <style>
-        body {
-            background: #071525;
-            color: white;
-            font-family: Arial;
-            text-align: center;
-            padding: 80px 20px;
-        }
-        h1 {
-            color: #d4af37;
-            font-size: 40px;
-        }
-        p {
-            color: #cccccc;
-            font-size: 18px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DIAMOND NARAINDUT | OFFICIAL</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #080f16;
+    color: #e5e9ed;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    padding: 25px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #263746;
+}
+
+.logo {
+    color: #c5a45c;
+    font-size: 19px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+nav a {
+    color: #aaa;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+nav a:hover {
+    color: #c5a45c;
+}
+
+.hero {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 70px 10%;
+    background: linear-gradient(120deg, #0c1b27, #080f16);
+}
+
+.tag {
+    color: #a58c52;
+    letter-spacing: 5px;
+    font-size: 12px;
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-size: clamp(38px, 8vw, 75px);
+    letter-spacing: 4px;
+    color: white;
+}
+
+h1 span {
+    color: #c5a45c;
+}
+
+.hero p {
+    margin-top: 20px;
+    color: #9daab5;
+    letter-spacing: 2px;
+    line-height: 1.8;
+}
+
+.line {
+    width: 75px;
+    height: 3px;
+    background: #c5a45c;
+    margin-top: 30px;
+}
+
+section {
+    padding: 70px 10%;
+}
+
+h2 {
+    color: #c5a45c;
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+}
+
+.about {
+    background: #0d1721;
+}
+
+.about p {
+    max-width: 650px;
+    line-height: 1.9;
+    color: #aeb8c1;
+}
+
+footer {
+    border-top: 1px solid #263746;
+    padding: 30px;
+    text-align: center;
+    color: #65717d;
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+</style>
 </head>
+
 <body>
 
-    <h1>DIAMOND NARAINDUT</h1>
-    <p>Personal Website</p>
-    <p>Welcome to my official website.</p>
+<header>
+    <div class="logo">DN // OFFICIAL</div>
+    <nav>
+        <a href="#home">HOME</a>
+        <a href="#about">PROFILE</a>
+    </nav>
+</header>
+
+<div class="hero" id="home">
+    <div class="tag">PERSONAL WEBSITE // EST. 2026</div>
+
+    <h1>DIAMOND<br><span>NARAINDUT</span></h1>
+
+    <p>
+        DISCIPLINE. PRECISION. PURPOSE.<br>
+        A PERSONAL PROFILE AND DIGITAL PRESENCE.
+    </p>
+
+    <div class="line"></div>
+</div>
+
+<section class="about" id="about">
+    <h2>PROFILE</h2>
+
+    <p>
+        Welcome to my official website.
+
+        This platform serves as my personal digital
+        presence, documenting my interests, experiences
+        and professional journey.
+
+        Independent. Focused. Forward.
+    </p>
+</section>
+
+<footer>
+    DIAMOND NARAINDUT © 2026
+    <br><br>
+    PERSONAL WEBSITE
+</footer>
 
 </body>
 </html>
-
