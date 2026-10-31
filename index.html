@@ -1,9 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DIAMOND NARAINDUT | OFFICIAL</title>
+
+<title>Diamond Naraindut | Official Profile</title>
 
 <style>
 * {
@@ -13,105 +15,165 @@
 }
 
 body {
-    background: #080f16;
-    color: #e5e9ed;
+    background: #07111c;
+    color: #e8edf2;
     font-family: Arial, sans-serif;
 }
 
+/* Navigation */
 header {
-    padding: 25px 8%;
+    padding: 24px 8%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #263746;
+    border-bottom: 1px solid #26394a;
+    background: #091522;
 }
 
 .logo {
-    color: #c5a45c;
-    font-size: 19px;
-    letter-spacing: 3px;
+    color: #c9aa65;
+    font-size: 17px;
     font-weight: bold;
+    letter-spacing: 4px;
 }
 
 nav a {
-    color: #aaa;
+    color: #b9c3cd;
     text-decoration: none;
-    margin-left: 20px;
-    font-size: 12px;
+    margin-left: 25px;
+    font-size: 11px;
     letter-spacing: 2px;
 }
 
 nav a:hover {
-    color: #c5a45c;
+    color: #c9aa65;
 }
 
+/* Hero */
 .hero {
-    min-height: 80vh;
+    min-height: 75vh;
+    padding: 100px 10%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 70px 10%;
-    background: linear-gradient(120deg, #0c1b27, #080f16);
+    background:
+    linear-gradient(110deg, #0c2031, #07111c 75%);
 }
 
-.tag {
-    color: #a58c52;
+.classification {
+    color: #c9aa65;
+    font-size: 11px;
     letter-spacing: 5px;
-    font-size: 12px;
-    margin-bottom: 25px;
+    margin-bottom: 28px;
 }
 
-h1 {
-    font-size: clamp(38px, 8vw, 75px);
-    letter-spacing: 4px;
-    color: white;
+.hero h1 {
+    font-size: clamp(40px, 8vw, 76px);
+    letter-spacing: 5px;
+    line-height: 1.1;
 }
 
-h1 span {
-    color: #c5a45c;
+.hero h1 span {
+    color: #c9aa65;
 }
 
-.hero p {
-    margin-top: 20px;
-    color: #9daab5;
-    letter-spacing: 2px;
-    line-height: 1.8;
+.subtitle {
+    margin-top: 25px;
+    color: #9eacba;
+    font-size: 13px;
+    letter-spacing: 3px;
 }
 
-.line {
-    width: 75px;
+.gold-line {
+    width: 85px;
     height: 3px;
-    background: #c5a45c;
-    margin-top: 30px;
+    background: #c9aa65;
+    margin-top: 35px;
 }
 
-section {
-    padding: 70px 10%;
+/* Profile */
+.profile {
+    padding: 85px 10%;
+    background: #0b1825;
 }
 
-h2 {
-    color: #c5a45c;
+.section-label {
+    color: #c9aa65;
+    font-size: 11px;
     letter-spacing: 4px;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 
-.about {
-    background: #0d1721;
+.profile h2 {
+    font-size: 28px;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
 }
 
-.about p {
-    max-width: 650px;
-    line-height: 1.9;
-    color: #aeb8c1;
+.biography {
+    max-width: 780px;
+    color: #bdc8d2;
+    font-size: 16px;
+    line-height: 2;
+    border-left: 3px solid #c9aa65;
+    padding-left: 25px;
 }
 
+/* Credentials */
+.credentials {
+    padding: 65px 10%;
+    background: #07111c;
+}
+
+.credentials h2 {
+    color: #c9aa65;
+    font-size: 19px;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+}
+
+.credential {
+    padding: 20px;
+    border: 1px solid #26394a;
+    margin-bottom: 15px;
+    background: #0c1a28;
+}
+
+.credential h3 {
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.credential p {
+    color: #8f9eac;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* Footer */
 footer {
-    border-top: 1px solid #263746;
     padding: 30px;
     text-align: center;
-    color: #65717d;
+    border-top: 1px solid #26394a;
+    color: #788795;
     font-size: 11px;
     letter-spacing: 3px;
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav a {
+        margin: 0 8px;
+    }
+
+    .hero {
+        min-height: 65vh;
+    }
 }
 </style>
 </head>
@@ -120,38 +182,68 @@ footer {
 
 <header>
     <div class="logo">DN // OFFICIAL</div>
+
     <nav>
         <a href="#home">HOME</a>
-        <a href="#about">PROFILE</a>
+        <a href="#profile">PROFILE</a>
+        <a href="#credentials">BACKGROUND</a>
     </nav>
 </header>
 
-<div class="hero" id="home">
-    <div class="tag">PERSONAL WEBSITE // EST. 2026</div>
+<main>
 
-    <h1>DIAMOND<br><span>NARAINDUT</span></h1>
+<section class="hero" id="home">
+    <div class="classification">
+        PERSONAL PROFILE // EST. 2026
+    </div>
 
-    <p>
-        DISCIPLINE. PRECISION. PURPOSE.<br>
-        A PERSONAL PROFILE AND DIGITAL PRESENCE.
+    <h1>
+        DIAMOND<br>
+        <span>NARAINDUT</span>
+    </h1>
+
+    <p class="subtitle">
+        DISCIPLINE • PRECISION • PURPOSE
     </p>
 
-    <div class="line"></div>
-</div>
+    <div class="gold-line"></div>
+</section>
 
-<section class="about" id="about">
-    <h2>PROFILE</h2>
+<section class="profile" id="profile">
+    <div class="section-label">01 // INTRODUCTION</div>
 
-    <p>
-        Welcome to my official website.
+    <h2>PROFESSIONAL PROFILE</h2>
 
-        This platform serves as my personal digital
-        presence, documenting my interests, experiences
-        and professional journey.
-
-        Independent. Focused. Forward.
+    <p class="biography">
+        Graduate of Britannia Royal Naval College, with tactical
+        Coast Guard military training, operational discipline,
+        and a strong commitment to excellence. Affiliated with
+        the GDF Cyber Security Signal Corps Unit (G6).
     </p>
 </section>
+
+<section class="credentials" id="credentials">
+    <div class="section-label">02 // BACKGROUND</div>
+
+    <h2>PROFESSIONAL BACKGROUND</h2>
+
+    <div class="credential">
+        <h3>BRITANNIA ROYAL NAVAL COLLEGE</h3>
+        <p>Graduate</p>
+    </div>
+
+    <div class="credential">
+        <h3>TACTICAL COAST GUARD TRAINING</h3>
+        <p>Military training and operational discipline</p>
+    </div>
+
+    <div class="credential">
+        <h3>GDF CYBER SECURITY SIGNAL CORPS</h3>
+        <p>Unit G6 affiliation</p>
+    </div>
+</section>
+
+</main>
 
 <footer>
     DIAMOND NARAINDUT © 2026
