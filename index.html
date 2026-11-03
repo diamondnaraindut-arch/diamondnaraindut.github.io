@@ -316,6 +316,14 @@ footer {
                 placeholder="Enter verification response"
                 required>
 
+            <label>SECURITY CLEARANCE CODE</label>
+
+            <input
+                id="clearance"
+                type="password"
+                placeholder="Enter Clearance Code"
+                required>
+
             <button type="submit">
                 VERIFY CREDENTIALS
             </button>
@@ -398,7 +406,7 @@ footer {
                 <h2>ACCESS AUTHORIZATION</h2>
                 <p>
                     Service Number: DN-001<br>
-                    Clearance Level: PRIVATE PROFILE<br>
+                    Clearance Level: LEVEL-04<br>
                     Access Status: Authorized
                 </p>
             </div>
@@ -436,11 +444,13 @@ function login(event) {
     const user = document.getElementById("username").value.trim();
     const pass = document.getElementById("password").value;
     const challenge = document.getElementById("challenge").value.trim();
+    const clearance = document.getElementById("clearance").value.trim();
 
     if (
         user === "DN-001" &&
         pass === "NAVY2026" &&
-        challenge.toUpperCase() === "GUYANA"
+        challenge.toUpperCase() === "GUYANA" &&
+        clearance.toUpperCase() === "LEVEL-04"
     ) {
 
         document.getElementById("loginSection").style.display = "none";
@@ -463,6 +473,7 @@ function logout() {
     document.getElementById("username").value = "";
     document.getElementById("password").value = "";
     document.getElementById("challenge").value = "";
+    document.getElementById("clearance").value = "";
 
 }
 
