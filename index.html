@@ -4,6 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Personnel Access | Diamond Naraindut</title>
 
 <style>
@@ -14,200 +15,255 @@
 }
 
 body {
-    background: #080e12;
-    color: #d5ded9;
+    background: #080e13;
+    color: #dce3e5;
     font-family: Arial, sans-serif;
-    min-height: 100vh;
 }
 
-/* HEADER */
+/* TOP BAR */
 header {
-    background: #101b20;
-    border-bottom: 1px solid #46564c;
-    padding: 17px 6%;
+    height: 75px;
+    padding: 0 6%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: #0c151b;
+    border-bottom: 1px solid #35443c;
 }
 
 .brand {
-    color: #c6b77a;
-    letter-spacing: 3px;
-    font-size: 14px;
+    color: #c5b477;
+    font-size: 13px;
     font-weight: bold;
+    letter-spacing: 3px;
 }
 
 .flag {
-    font-size: 25px;
+    font-size: 28px;
 }
 
-.status {
-    color: #a8b99e;
-    font-size: 10px;
-    letter-spacing: 2px;
-    text-align: center;
-    padding: 12px;
-    border-bottom: 1px solid #26352d;
-}
-
-/* LOGIN */
+/* LOGIN BACKGROUND */
 .login-section {
-    min-height: 85vh;
+    min-height: calc(100vh - 75px);
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 30px 15px;
+
     background:
-    linear-gradient(rgba(3,10,13,.78), rgba(3,10,13,.91)),
+    linear-gradient(rgba(3,9,13,.65), rgba(3,9,13,.88)),
     url("naval-base.png") center/cover no-repeat;
 }
 
+/* LOGIN PANEL */
 .login-box {
     width: 100%;
-    max-width: 420px;
-    padding: 40px 30px;
-    background: rgba(12,22,24,.96);
-    border: 1px solid #66714e;
-    text-align: center;
-    box-shadow: 0 15px 60px #000;
+    max-width: 430px;
+    padding: 42px 35px;
+    background: rgba(9,18,23,.96);
+    border: 1px solid #59634c;
+    box-shadow: 0 20px 70px #000;
 }
 
-.emblem {
+.top-label {
+    color: #b9a66b;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+.anchor {
+    text-align: center;
     font-size: 42px;
-    color: #c6b77a;
-    margin-bottom: 15px;
+    margin: 22px 0;
+    color: #c8b77d;
 }
 
 .login-box h1 {
-    font-size: 20px;
-    letter-spacing: 3px;
-    color: #d6c68c;
-    margin-bottom: 12px;
+    text-align: center;
+    font-size: 21px;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
 }
 
-.warning {
-    color: #c27b6e;
+.description {
+    text-align: center;
+    color: #82918b;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 32px;
+}
+
+.divider {
+    height: 1px;
+    background: #37453c;
+    margin-bottom: 28px;
+}
+
+label {
+    display: block;
+    color: #b9bca8;
     font-size: 10px;
     letter-spacing: 2px;
-    margin: 20px 0 30px;
+    margin-bottom: 10px;
 }
 
 input {
     width: 100%;
     padding: 15px;
-    margin-bottom: 15px;
-    background: #101a1c;
+    margin-bottom: 23px;
+    background: #101b20;
     border: 1px solid #39483e;
     color: white;
+    font-size: 13px;
     outline: none;
 }
 
 input:focus {
-    border-color: #c6b77a;
+    border-color: #bca96e;
 }
 
 button {
     width: 100%;
-    padding: 15px;
-    background: #77754b;
+    padding: 16px;
+    border: 1px solid #9c8955;
+    background: #766b43;
     color: white;
-    border: none;
+    letter-spacing: 3px;
     font-weight: bold;
-    letter-spacing: 2px;
     cursor: pointer;
 }
 
 button:hover {
-    background: #92885a;
+    background: #928354;
 }
 
 #error {
-    color: #e58b80;
-    font-size: 12px;
+    color: #d47b70;
+    text-align: center;
+    font-size: 11px;
     margin-top: 15px;
+}
+
+.login-footer {
+    margin-top: 28px;
+    padding-top: 18px;
+    border-top: 1px solid #344039;
+    color: #718078;
+    font-size: 9px;
+    text-align: center;
+    letter-spacing: 2px;
 }
 
 /* DASHBOARD */
 #dashboard {
     display: none;
-    padding: 45px 7%;
-    min-height: 85vh;
-    background: #0a1418;
+    min-height: 100vh;
+    background: #091319;
 }
 
-.dashboard-heading {
-    border-bottom: 1px solid #4c5a49;
-    padding-bottom: 25px;
-    margin-bottom: 30px;
+.dash-header {
+    background: #101d22;
+    padding: 22px 6%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #455443;
 }
 
-.dashboard-heading small {
-    color: #b5a66d;
+.dash-header span {
+    color: #c4b477;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.dash-content {
+    max-width: 1100px;
+    margin: auto;
+    padding: 55px 25px;
+}
+
+.welcome {
+    border-left: 3px solid #bba76b;
+    padding-left: 22px;
+    margin-bottom: 38px;
+}
+
+.welcome small {
+    color: #bba76b;
     letter-spacing: 3px;
+    font-size: 10px;
 }
 
-.dashboard-heading h1 {
-    margin-top: 12px;
-    font-size: 30px;
+.welcome h1 {
+    font-size: clamp(25px, 5vw, 40px);
     letter-spacing: 3px;
+    margin: 15px 0;
+}
+
+.welcome p {
+    color: #8e9c98;
+    font-size: 13px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
 }
 
 .panel {
-    border: 1px solid #35483b;
-    background: #101c20;
-    padding: 25px;
-    margin-bottom: 20px;
+    background: #101e23;
+    border: 1px solid #34443a;
+    padding: 26px;
+    min-height: 150px;
 }
 
 .panel h2 {
-    color: #c6b77a;
-    font-size: 14px;
-    letter-spacing: 3px;
+    color: #c5b477;
+    font-size: 12px;
+    letter-spacing: 2px;
     margin-bottom: 20px;
 }
 
 .panel p {
-    color: #abb7b0;
-    font-size: 14px;
+    color: #aebbb5;
+    font-size: 13px;
     line-height: 2;
 }
 
-.tag {
-    display: inline-block;
-    border: 1px solid #69754e;
-    color: #c6c68b;
-    padding: 8px 12px;
-    font-size: 10px;
+.panel small {
+    color: #778a7e;
+    letter-spacing: 1px;
+}
+
+.session {
+    color: #91a77b;
+    font-size: 11px;
     letter-spacing: 2px;
-    margin: 5px 5px 5px 0;
 }
 
 .logout {
-    max-width: 180px;
-    margin-top: 20px;
-    background: #633c35;
+    max-width: 200px;
+    margin-top: 35px;
+    background: #293b35;
+    border-color: #52624d;
 }
 
-.disclaimer {
+footer {
     text-align: center;
+    color: #586961;
+    padding: 25px;
     font-size: 9px;
-    color: #758078;
-    letter-spacing: 1px;
-    padding: 18px;
-    line-height: 1.8;
+    letter-spacing: 2px;
 }
 
-@media(max-width: 600px) {
-    header {
-        padding: 15px;
+@media(max-width: 650px) {
+    .grid {
+        grid-template-columns: 1fr;
     }
 
-    .brand {
-        font-size: 11px;
-    }
-
-    .dashboard-heading h1 {
-        font-size: 23px;
+    .login-box {
+        padding: 35px 23px;
     }
 }
 </style>
@@ -216,143 +272,144 @@ button:hover {
 <body>
 
 <header>
-    <div class="brand">DN // PERSONNEL SYSTEM</div>
+    <div class="brand">DN // PERSONNEL ACCESS</div>
     <div class="flag">🇬🇾</div>
 </header>
 
-<div class="status">
-    SYSTEM STATUS: ONLINE // DEMONSTRATION ENVIRONMENT
-</div>
-
-<!-- LOGIN SCREEN -->
+<!-- LOGIN -->
 
 <section class="login-section" id="loginSection">
 
     <div class="login-box">
 
-        <div class="emblem">⚓</div>
+        <div class="top-label">
+            PERSONNEL MANAGEMENT SYSTEM
+        </div>
 
-        <h1>PERSONNEL ACCESS</h1>
+        <div class="anchor">⚓</div>
 
-        <p style="color:#a8b2ab;font-size:11px;letter-spacing:2px;">
-            RESTRICTED ACCESS PORTAL
+        <h1>ACCESS PORTAL</h1>
+
+        <p class="description">
+            RESTRICTED PERSONNEL ACCESS
         </p>
 
-        <div class="warning">
-            AUTHORIZED DEMONSTRATION USERS ONLY
-        </div>
+        <div class="divider"></div>
 
         <form onsubmit="login(event)">
 
-            <input
-                type="text"
-                id="username"
-                placeholder="PERSONNEL IDENTIFICATION"
-                autocomplete="off"
-                required>
+            <label>PERSONNEL IDENTIFICATION</label>
 
             <input
-                type="password"
+                id="username"
+                type="text"
+                placeholder="Enter identification"
+                required>
+
+            <label>ACCESS PASSWORD</label>
+
+            <input
                 id="password"
-                placeholder="ACCESS PASSWORD"
+                type="password"
+                placeholder="Enter password"
                 required>
 
             <button type="submit">
-                ACCESS PORTAL
+                AUTHENTICATE
             </button>
+
+            <p id="error"></p>
 
         </form>
 
-        <p id="error"></p>
+        <div class="login-footer">
+            PRIVATE PERSONNEL PORTAL
+            <br><br>
+            DIAMOND NARAINDUT
+        </div>
 
     </div>
 
 </section>
 
-<!-- PERSONNEL DASHBOARD -->
+<!-- DASHBOARD -->
 
 <section id="dashboard">
 
-    <div class="dashboard-heading">
-
-        <small>PERSONNEL RECORD // DEMONSTRATION</small>
-
-        <h1>DIAMOND NARAINDUT</h1>
-
-        <p style="color:#9ca99e;margin-top:12px;">
-            Personnel Profile Access
-        </p>
-
+    <div class="dash-header">
+        <span>PERSONNEL COMMAND</span>
+        <span>🇬🇾 GUYANA</span>
     </div>
 
-    <div class="panel">
+    <div class="dash-content">
 
-        <h2>PERSONNEL INFORMATION</h2>
+        <div class="welcome">
 
-        <p>
-            Name: Diamond Naraindut
+            <small>PERSONNEL PROFILE // 001</small>
+
+            <h1>DIAMOND NARAINDUT</h1>
+
+            <p>Personnel profile successfully accessed.</p>
+
             <br>
-            Profile: Personal Professional Record
-            <br>
-            Country: Guyana
-        </p>
+            <span class="session">● SESSION ACTIVE</span>
+
+        </div>
+
+        <div class="grid">
+
+            <div class="panel">
+                <h2>PERSONNEL RECORD</h2>
+                <p>
+                    Name: Diamond Naraindut<br>
+                    Country: Guyana<br>
+                    Record: Personal Profile
+                </p>
+            </div>
+
+            <div class="panel">
+                <h2>NAVAL BACKGROUND</h2>
+                <p>
+                    Britannia Royal Naval College<br>
+                    Graduate
+                </p>
+            </div>
+
+            <div class="panel">
+                <h2>MILITARY TRAINING</h2>
+                <p>
+                    Tactical Coast Guard military training<br>
+                    Operational discipline
+                </p>
+            </div>
+
+            <div class="panel">
+                <h2>CYBER SECURITY</h2>
+                <p>
+                    GDF Cyber Security Signal Corps Unit<br>
+                    G6 affiliation
+                </p>
+            </div>
+
+        </div>
+
+        <button class="logout" onclick="logout()">
+            TERMINATE SESSION
+        </button>
 
     </div>
 
-    <div class="panel">
-
-        <h2>PROFESSIONAL BACKGROUND</h2>
-
-        <p>
-            Graduate of Britannia Royal Naval College, with
-            tactical Coast Guard military training, operational
-            discipline, and a strong commitment to excellence.
-            Affiliated with the GDF Cyber Security Signal Corps
-            Unit (G6).
-        </p>
-
-    </div>
-
-    <div class="panel">
-
-        <h2>PERSONNEL CLASSIFICATION</h2>
-
-        <span class="tag">NAVAL BACKGROUND</span>
-        <span class="tag">MILITARY TRAINING</span>
-        <span class="tag">CYBER SECURITY</span>
-        <span class="tag">PROFESSIONAL PROFILE</span>
-
-    </div>
-
-    <div class="panel">
-
-        <h2>ACCESS INFORMATION</h2>
-
-        <p>
-            Demonstration session successfully established.
-            <br>
-            Portal: Personal Profile System
-            <br>
-            Environment: Simulation
-        </p>
-
-    </div>
-
-    <button class="logout" onclick="logout()">
-        TERMINATE SESSION
-    </button>
+    <footer>
+        DIAMOND NARAINDUT // PRIVATE PERSONNEL PORTAL
+        <br><br>
+        INDEPENDENT PERSONAL PROJECT
+    </footer>
 
 </section>
-
-<footer class="disclaimer">
-    FICTIONAL PERSONAL WEBSITE · NOT AN OFFICIAL GOVERNMENT
-    OR MILITARY SYSTEM · NO REAL PERSONNEL RECORDS
-</footer>
 
 <script>
 
 function login(event) {
-
     event.preventDefault();
 
     const user = document.getElementById("username").value;
@@ -361,28 +418,22 @@ function login(event) {
     if (user === "operator" && pass === "NAVY2026") {
 
         document.getElementById("loginSection").style.display = "none";
-
         document.getElementById("dashboard").style.display = "block";
-
-        document.getElementById("error").textContent = "";
 
     } else {
 
         document.getElementById("error").textContent =
-        "ACCESS DENIED — INVALID DEMONSTRATION CREDENTIALS";
+        "ACCESS DENIED — INVALID CREDENTIALS";
 
     }
 }
 
 function logout() {
-
     document.getElementById("dashboard").style.display = "none";
-
     document.getElementById("loginSection").style.display = "flex";
 
     document.getElementById("username").value = "";
     document.getElementById("password").value = "";
-
 }
 
 </script>
