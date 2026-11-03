@@ -4,7 +4,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Personnel Access | Diamond Naraindut</title>
 
 <style>
@@ -20,7 +19,6 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* TOP BAR */
 header {
     height: 75px;
     padding: 0 6%;
@@ -38,24 +36,19 @@ header {
     letter-spacing: 3px;
 }
 
-.flag {
-    font-size: 28px;
-}
+.flag { font-size: 28px; }
 
-/* LOGIN BACKGROUND */
 .login-section {
     min-height: calc(100vh - 75px);
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 30px 15px;
-
     background:
     linear-gradient(rgba(3,9,13,.65), rgba(3,9,13,.88)),
     url("naval-base.png") center/cover no-repeat;
 }
 
-/* LOGIN PANEL */
 .login-box {
     width: 100%;
     max-width: 430px;
@@ -119,9 +112,7 @@ input {
     outline: none;
 }
 
-input:focus {
-    border-color: #bca96e;
-}
+input:focus { border-color: #bca96e; }
 
 button {
     width: 100%;
@@ -134,9 +125,7 @@ button {
     cursor: pointer;
 }
 
-button:hover {
-    background: #928354;
-}
+button:hover { background: #928354; }
 
 #error {
     color: #d47b70;
@@ -155,7 +144,6 @@ button:hover {
     letter-spacing: 2px;
 }
 
-/* DASHBOARD */
 #dashboard {
     display: none;
     min-height: 100vh;
@@ -258,13 +246,8 @@ footer {
 }
 
 @media(max-width: 650px) {
-    .grid {
-        grid-template-columns: 1fr;
-    }
-
-    .login-box {
-        padding: 35px 23px;
-    }
+    .grid { grid-template-columns: 1fr; }
+    .login-box { padding: 35px 23px; }
 }
 </style>
 </head>
@@ -276,50 +259,35 @@ footer {
     <div class="flag">🇬🇾</div>
 </header>
 
-<!-- LOGIN -->
-
 <section class="login-section" id="loginSection">
-
     <div class="login-box">
 
-        <div class="top-label">
-            PERSONNEL MANAGEMENT SYSTEM
-        </div>
-
+        <div class="top-label">PERSONNEL MANAGEMENT SYSTEM</div>
         <div class="anchor">⚓</div>
 
         <h1>ACCESS PORTAL</h1>
 
-        <p class="description">
-            RESTRICTED PERSONNEL ACCESS
-        </p>
+        <p class="description">RESTRICTED PERSONNEL ACCESS</p>
 
         <div class="divider"></div>
 
         <form onsubmit="login(event)">
 
-            <label>PERSONNEL IDENTIFICATION</label>
+            <label>OPERATOR ID</label>
+            <input id="username" type="text"
+                   placeholder="Enter Operator ID" required>
 
-            <input
-                id="username"
-                type="text"
-                placeholder="Enter identification"
-                required>
+            <label>ACCESS CODE</label>
+            <input id="password" type="password"
+                   placeholder="Enter Access Code" required>
 
-            <label>ACCESS PASSWORD</label>
+            <label>CHALLENGE &amp; RESPONSE</label>
+            <input id="challenge" type="text"
+                   placeholder="Enter verification response" required>
 
-            <input
-                id="password"
-                type="password"
-                placeholder="Enter password"
-                required>
-
-            <button type="submit">
-                AUTHENTICATE
-            </button>
+            <button type="submit">VERIFY CREDENTIALS</button>
 
             <p id="error"></p>
-
         </form>
 
         <div class="login-footer">
@@ -327,12 +295,8 @@ footer {
             <br><br>
             DIAMOND NARAINDUT
         </div>
-
     </div>
-
 </section>
-
-<!-- DASHBOARD -->
 
 <section id="dashboard">
 
@@ -344,16 +308,11 @@ footer {
     <div class="dash-content">
 
         <div class="welcome">
-
             <small>PERSONNEL PROFILE // 001</small>
-
             <h1>DIAMOND NARAINDUT</h1>
-
             <p>Personnel profile successfully accessed.</p>
-
             <br>
             <span class="session">● SESSION ACTIVE</span>
-
         </div>
 
         <div class="grid">
@@ -391,6 +350,24 @@ footer {
                 </p>
             </div>
 
+            <div class="panel">
+                <h2>ACCESS AUTHORIZATION</h2>
+                <p>
+                    Operator ID: OPERATOR<br>
+                    Clearance Level: PRIVATE PROFILE<br>
+                    Access Status: Authorized
+                </p>
+            </div>
+
+            <div class="panel">
+                <h2>SECURITY STATUS</h2>
+                <p>
+                    Authentication: Successful<br>
+                    Verification: Complete<br>
+                    Session: Active
+                </p>
+            </div>
+
         </div>
 
         <button class="logout" onclick="logout()">
@@ -408,23 +385,24 @@ footer {
 </section>
 
 <script>
-
 function login(event) {
     event.preventDefault();
 
-    const user = document.getElementById("username").value;
+    const user = document.getElementById("username").value.trim();
     const pass = document.getElementById("password").value;
+    const challenge = document.getElementById("challenge").value.trim();
 
-    if (user === "operator" && pass === "NAVY2026") {
-
+    if (
+        user === "operator" &&
+        pass === "NAVY2026" &&
+        challenge.toUpperCase() === "GUYANA"
+    ) {
         document.getElementById("loginSection").style.display = "none";
         document.getElementById("dashboard").style.display = "block";
-
+        document.getElementById("error").textContent = "";
     } else {
-
         document.getElementById("error").textContent =
-        "ACCESS DENIED — INVALID CREDENTIALS";
-
+            "ACCESS DENIED — VERIFICATION FAILED";
     }
 }
 
@@ -434,8 +412,8 @@ function logout() {
 
     document.getElementById("username").value = "";
     document.getElementById("password").value = "";
+    document.getElementById("challenge").value = "";
 }
-
 </script>
 
 </body>
