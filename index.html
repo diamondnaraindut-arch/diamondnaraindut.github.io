@@ -4,8 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Diamond Naraindut | Official Profile</title>
+<title>Personnel Access | Diamond Naraindut</title>
 
 <style>
 * {
@@ -15,164 +14,200 @@
 }
 
 body {
-    background: #07111c;
-    color: #e8edf2;
+    background: #080e12;
+    color: #d5ded9;
     font-family: Arial, sans-serif;
+    min-height: 100vh;
 }
 
-/* Navigation */
+/* HEADER */
 header {
-    padding: 24px 8%;
+    background: #101b20;
+    border-bottom: 1px solid #46564c;
+    padding: 17px 6%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #26394a;
-    background: #091522;
 }
 
-.logo {
-    color: #c9aa65;
-    font-size: 17px;
-    font-weight: bold;
-    letter-spacing: 4px;
-}
-
-nav a {
-    color: #b9c3cd;
-    text-decoration: none;
-    margin-left: 25px;
-    font-size: 11px;
-    letter-spacing: 2px;
-}
-
-nav a:hover {
-    color: #c9aa65;
-}
-
-/* Hero */
-.hero {
-    min-height: 75vh;
-    padding: 100px 10%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background:
-    linear-gradient(110deg, #0c2031, #07111c 75%);
-}
-
-.classification {
-    color: #c9aa65;
-    font-size: 11px;
-    letter-spacing: 5px;
-    margin-bottom: 28px;
-}
-
-.hero h1 {
-    font-size: clamp(40px, 8vw, 76px);
-    letter-spacing: 5px;
-    line-height: 1.1;
-}
-
-.hero h1 span {
-    color: #c9aa65;
-}
-
-.subtitle {
-    margin-top: 25px;
-    color: #9eacba;
-    font-size: 13px;
+.brand {
+    color: #c6b77a;
     letter-spacing: 3px;
-}
-
-.gold-line {
-    width: 85px;
-    height: 3px;
-    background: #c9aa65;
-    margin-top: 35px;
-}
-
-/* Profile */
-.profile {
-    padding: 85px 10%;
-    background: #0b1825;
-}
-
-.section-label {
-    color: #c9aa65;
-    font-size: 11px;
-    letter-spacing: 4px;
-    margin-bottom: 15px;
-}
-
-.profile h2 {
-    font-size: 28px;
-    letter-spacing: 3px;
-    margin-bottom: 30px;
-}
-
-.biography {
-    max-width: 780px;
-    color: #bdc8d2;
-    font-size: 16px;
-    line-height: 2;
-    border-left: 3px solid #c9aa65;
-    padding-left: 25px;
-}
-
-/* Credentials */
-.credentials {
-    padding: 65px 10%;
-    background: #07111c;
-}
-
-.credentials h2 {
-    color: #c9aa65;
-    font-size: 19px;
-    letter-spacing: 3px;
-    margin-bottom: 30px;
-}
-
-.credential {
-    padding: 20px;
-    border: 1px solid #26394a;
-    margin-bottom: 15px;
-    background: #0c1a28;
-}
-
-.credential h3 {
     font-size: 14px;
+    font-weight: bold;
+}
+
+.flag {
+    font-size: 25px;
+}
+
+.status {
+    color: #a8b99e;
+    font-size: 10px;
     letter-spacing: 2px;
-    margin-bottom: 8px;
-}
-
-.credential p {
-    color: #8f9eac;
-    font-size: 13px;
-    line-height: 1.7;
-}
-
-/* Footer */
-footer {
-    padding: 30px;
     text-align: center;
-    border-top: 1px solid #26394a;
-    color: #788795;
-    font-size: 11px;
+    padding: 12px;
+    border-bottom: 1px solid #26352d;
+}
+
+/* LOGIN */
+.login-section {
+    min-height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+    background:
+    linear-gradient(rgba(3,10,13,.78), rgba(3,10,13,.91)),
+    url("naval-base.png") center/cover no-repeat;
+}
+
+.login-box {
+    width: 100%;
+    max-width: 420px;
+    padding: 40px 30px;
+    background: rgba(12,22,24,.96);
+    border: 1px solid #66714e;
+    text-align: center;
+    box-shadow: 0 15px 60px #000;
+}
+
+.emblem {
+    font-size: 42px;
+    color: #c6b77a;
+    margin-bottom: 15px;
+}
+
+.login-box h1 {
+    font-size: 20px;
+    letter-spacing: 3px;
+    color: #d6c68c;
+    margin-bottom: 12px;
+}
+
+.warning {
+    color: #c27b6e;
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin: 20px 0 30px;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    background: #101a1c;
+    border: 1px solid #39483e;
+    color: white;
+    outline: none;
+}
+
+input:focus {
+    border-color: #c6b77a;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background: #77754b;
+    color: white;
+    border: none;
+    font-weight: bold;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #92885a;
+}
+
+#error {
+    color: #e58b80;
+    font-size: 12px;
+    margin-top: 15px;
+}
+
+/* DASHBOARD */
+#dashboard {
+    display: none;
+    padding: 45px 7%;
+    min-height: 85vh;
+    background: #0a1418;
+}
+
+.dashboard-heading {
+    border-bottom: 1px solid #4c5a49;
+    padding-bottom: 25px;
+    margin-bottom: 30px;
+}
+
+.dashboard-heading small {
+    color: #b5a66d;
     letter-spacing: 3px;
 }
 
-@media (max-width: 600px) {
+.dashboard-heading h1 {
+    margin-top: 12px;
+    font-size: 30px;
+    letter-spacing: 3px;
+}
+
+.panel {
+    border: 1px solid #35483b;
+    background: #101c20;
+    padding: 25px;
+    margin-bottom: 20px;
+}
+
+.panel h2 {
+    color: #c6b77a;
+    font-size: 14px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.panel p {
+    color: #abb7b0;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.tag {
+    display: inline-block;
+    border: 1px solid #69754e;
+    color: #c6c68b;
+    padding: 8px 12px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin: 5px 5px 5px 0;
+}
+
+.logout {
+    max-width: 180px;
+    margin-top: 20px;
+    background: #633c35;
+}
+
+.disclaimer {
+    text-align: center;
+    font-size: 9px;
+    color: #758078;
+    letter-spacing: 1px;
+    padding: 18px;
+    line-height: 1.8;
+}
+
+@media(max-width: 600px) {
     header {
-        flex-direction: column;
-        gap: 20px;
+        padding: 15px;
     }
 
-    nav a {
-        margin: 0 8px;
+    .brand {
+        font-size: 11px;
     }
 
-    .hero {
-        min-height: 65vh;
+    .dashboard-heading h1 {
+        font-size: 23px;
     }
 }
 </style>
@@ -181,75 +216,176 @@ footer {
 <body>
 
 <header>
-    <div class="logo">DN // OFFICIAL</div>
-
-    <nav>
-        <a href="#home">HOME</a>
-        <a href="#profile">PROFILE</a>
-        <a href="#credentials">BACKGROUND</a>
-    </nav>
+    <div class="brand">DN // PERSONNEL SYSTEM</div>
+    <div class="flag">🇬🇾</div>
 </header>
 
-<main>
+<div class="status">
+    SYSTEM STATUS: ONLINE // DEMONSTRATION ENVIRONMENT
+</div>
 
-<section class="hero" id="home">
-    <div class="classification">
-        PERSONAL PROFILE // EST. 2026
+<!-- LOGIN SCREEN -->
+
+<section class="login-section" id="loginSection">
+
+    <div class="login-box">
+
+        <div class="emblem">⚓</div>
+
+        <h1>PERSONNEL ACCESS</h1>
+
+        <p style="color:#a8b2ab;font-size:11px;letter-spacing:2px;">
+            RESTRICTED ACCESS PORTAL
+        </p>
+
+        <div class="warning">
+            AUTHORIZED DEMONSTRATION USERS ONLY
+        </div>
+
+        <form onsubmit="login(event)">
+
+            <input
+                type="text"
+                id="username"
+                placeholder="PERSONNEL IDENTIFICATION"
+                autocomplete="off"
+                required>
+
+            <input
+                type="password"
+                id="password"
+                placeholder="ACCESS PASSWORD"
+                required>
+
+            <button type="submit">
+                ACCESS PORTAL
+            </button>
+
+        </form>
+
+        <p id="error"></p>
+
     </div>
 
-    <h1>
-        DIAMOND<br>
-        <span>NARAINDUT</span>
-    </h1>
-
-    <p class="subtitle">
-        DISCIPLINE • PRECISION • PURPOSE
-    </p>
-
-    <div class="gold-line"></div>
 </section>
 
-<section class="profile" id="profile">
-    <div class="section-label">01 // INTRODUCTION</div>
+<!-- PERSONNEL DASHBOARD -->
 
-    <h2>PROFESSIONAL PROFILE</h2>
+<section id="dashboard">
 
-    <p class="biography">
-        Graduate of Britannia Royal Naval College, with tactical
-        Coast Guard military training, operational discipline,
-        and a strong commitment to excellence. Affiliated with
-        the GDF Cyber Security Signal Corps Unit (G6).
-    </p>
+    <div class="dashboard-heading">
+
+        <small>PERSONNEL RECORD // DEMONSTRATION</small>
+
+        <h1>DIAMOND NARAINDUT</h1>
+
+        <p style="color:#9ca99e;margin-top:12px;">
+            Personnel Profile Access
+        </p>
+
+    </div>
+
+    <div class="panel">
+
+        <h2>PERSONNEL INFORMATION</h2>
+
+        <p>
+            Name: Diamond Naraindut
+            <br>
+            Profile: Personal Professional Record
+            <br>
+            Country: Guyana
+        </p>
+
+    </div>
+
+    <div class="panel">
+
+        <h2>PROFESSIONAL BACKGROUND</h2>
+
+        <p>
+            Graduate of Britannia Royal Naval College, with
+            tactical Coast Guard military training, operational
+            discipline, and a strong commitment to excellence.
+            Affiliated with the GDF Cyber Security Signal Corps
+            Unit (G6).
+        </p>
+
+    </div>
+
+    <div class="panel">
+
+        <h2>PERSONNEL CLASSIFICATION</h2>
+
+        <span class="tag">NAVAL BACKGROUND</span>
+        <span class="tag">MILITARY TRAINING</span>
+        <span class="tag">CYBER SECURITY</span>
+        <span class="tag">PROFESSIONAL PROFILE</span>
+
+    </div>
+
+    <div class="panel">
+
+        <h2>ACCESS INFORMATION</h2>
+
+        <p>
+            Demonstration session successfully established.
+            <br>
+            Portal: Personal Profile System
+            <br>
+            Environment: Simulation
+        </p>
+
+    </div>
+
+    <button class="logout" onclick="logout()">
+        TERMINATE SESSION
+    </button>
+
 </section>
 
-<section class="credentials" id="credentials">
-    <div class="section-label">02 // BACKGROUND</div>
-
-    <h2>PROFESSIONAL BACKGROUND</h2>
-
-    <div class="credential">
-        <h3>BRITANNIA ROYAL NAVAL COLLEGE</h3>
-        <p>Graduate</p>
-    </div>
-
-    <div class="credential">
-        <h3>TACTICAL COAST GUARD TRAINING</h3>
-        <p>Military training and operational discipline</p>
-    </div>
-
-    <div class="credential">
-        <h3>GDF CYBER SECURITY SIGNAL CORPS</h3>
-        <p>Unit G6 affiliation</p>
-    </div>
-</section>
-
-</main>
-
-<footer>
-    DIAMOND NARAINDUT © 2026
-    <br><br>
-    PERSONAL WEBSITE
+<footer class="disclaimer">
+    FICTIONAL PERSONAL WEBSITE · NOT AN OFFICIAL GOVERNMENT
+    OR MILITARY SYSTEM · NO REAL PERSONNEL RECORDS
 </footer>
+
+<script>
+
+function login(event) {
+
+    event.preventDefault();
+
+    const user = document.getElementById("username").value;
+    const pass = document.getElementById("password").value;
+
+    if (user === "operator" && pass === "NAVY2026") {
+
+        document.getElementById("loginSection").style.display = "none";
+
+        document.getElementById("dashboard").style.display = "block";
+
+        document.getElementById("error").textContent = "";
+
+    } else {
+
+        document.getElementById("error").textContent =
+        "ACCESS DENIED — INVALID DEMONSTRATION CREDENTIALS";
+
+    }
+}
+
+function logout() {
+
+    document.getElementById("dashboard").style.display = "none";
+
+    document.getElementById("loginSection").style.display = "flex";
+
+    document.getElementById("username").value = "";
+    document.getElementById("password").value = "";
+
+}
+
+</script>
 
 </body>
 </html>
